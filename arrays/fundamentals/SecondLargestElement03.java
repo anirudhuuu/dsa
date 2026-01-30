@@ -2,20 +2,20 @@ package arrays.fundamentals;
 
 import java.util.Arrays;
 
-/**
+/*
  * Second Largest Element
  * ========================
  * Given an array of integers nums, return the second-largest
  * element in the array.
- * 
+ *
  * If the second-largest element does not exist, return -1.
  */
 public class SecondLargestElement03 {
 
-    /**
+    /*
      * Brute force approach: Sort the array, then scan from the end to find the
      * second largest.
-     * 
+     *
      * Time Complexity: O(n log n) (due to sorting)
      * Space Complexity: O(1)
      */
@@ -41,9 +41,9 @@ public class SecondLargestElement03 {
         return -1;
     }
 
-    /**
+    /*
      * Better approach: Find the largest, then scan again for the second largest.
-     * 
+     *
      * Time Complexity: O(n)
      * Space Complexity: O(1)
      */
@@ -71,9 +71,9 @@ public class SecondLargestElement03 {
         return secondLargestElement == Integer.MIN_VALUE ? -1 : secondLargestElement;
     }
 
-    /**
+    /*
      * Optimal approach: Find largest and second largest in a single pass.
-     * 
+     *
      * Time Complexity: O(n)
      * Space Complexity: O(1)
      */
@@ -93,10 +93,11 @@ public class SecondLargestElement03 {
         return secondLargestElement == Integer.MIN_VALUE ? -1 : secondLargestElement;
     }
 
-    public static void main(String[] args) {
-        int[] nums = { 1, 2, 3, 4, 5 };
-        System.out.println(secondLargestBrute(nums));
-        System.out.println(secondLargestBetter(nums));
-        System.out.println(secondLargestOptimal(nums));
+    static void main() {
+        int[] inputNumbers = {1, 2, 3, 4, 5};
+
+        System.out.println(secondLargestBrute(inputNumbers));
+        System.out.println(secondLargestBetter(inputNumbers));
+        System.out.println(secondLargestOptimal(inputNumbers));
     }
 }

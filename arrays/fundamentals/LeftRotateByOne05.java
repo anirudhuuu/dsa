@@ -1,16 +1,16 @@
 package arrays.fundamentals;
 
-/**
+/*
  * Left Rotate Array by One
  * ===========================
  * Given an integer array nums, rotate the array to the left by one.
- * 
+ *
  * Note: There is no need to return anything, just modify the given array.
  */
 public class LeftRotateByOne05 {
-    /**
+    /*
      * Brute force approach
-     * 
+     *
      * Time Complexity: O(n)
      * Space Complexity: O(n)
      */
@@ -24,9 +24,9 @@ public class LeftRotateByOne05 {
         result[nums.length - 1] = nums[0];
     }
 
-    /**
+    /*
      * Without any extra space
-     * 
+     *
      * Time Complexity: O(n)
      * Space Complexity: O(1)
      */
@@ -40,8 +40,8 @@ public class LeftRotateByOne05 {
         nums[nums.length - 1] = temp;
     }
 
-    public static void main(String[] args) {
-        int[] nums1 = { 1, 2, 3, 4, 5 };
+    static void main() {
+        int[] nums1 = {1, 2, 3, 4, 5};
         rotateArrayByOneBrute(nums1);
 
         for (int val : nums1) {
@@ -49,7 +49,7 @@ public class LeftRotateByOne05 {
         }
         System.out.println();
 
-        int[] nums2 = { 1, 2, 3, 4, 5 };
+        int[] nums2 = {1, 2, 3, 4, 5};
         rotateArrayByOne(nums2);
 
         for (int val : nums2) {

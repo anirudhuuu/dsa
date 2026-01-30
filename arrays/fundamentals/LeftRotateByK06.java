@@ -1,15 +1,15 @@
 package arrays.fundamentals;
 
-/**
+/*
  * Left Rotate Array by K
  * ===========================
  * Given an integer array nums and a non-negative integer k,
  * rotate the array to the left by k steps.
  */
 public class LeftRotateByK06 {
-    /**
+    /*
      * Brute force approach
-     * 
+     *
      * Time Complexity: O(n)
      * Space Complexity: O(k)
      */
@@ -43,9 +43,9 @@ public class LeftRotateByK06 {
         }
     }
 
-    /**
+    /*
      * Reverse array
-     * 
+     *
      * Time Complexity: O(n)
      * Space Complexity: O(1)
      */
@@ -60,9 +60,9 @@ public class LeftRotateByK06 {
         }
     }
 
-    /**
+    /*
      * Optimal approach
-     * 
+     *
      * Time Complexity: O(n)
      * Space Complexity: O(1)
      */
@@ -75,9 +75,9 @@ public class LeftRotateByK06 {
         reverseArray(nums, 0, n - 1);
     }
 
-    public static void main(String[] args) {
-        int[] nums1 = { 1, 2, 3, 4, 5 };
-        int[] nums2 = { 1, 2, 3, 4, 5 };
+    static void main() {
+        int[] nums1 = {1, 2, 3, 4, 5};
+        int[] nums2 = {1, 2, 3, 4, 5};
         int k = 2;
         rotateArrayBrute(nums1, k);
 

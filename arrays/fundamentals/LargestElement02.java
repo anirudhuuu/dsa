@@ -2,14 +2,14 @@ package arrays.fundamentals;
 
 import java.util.Arrays;
 
-/**
+/*
  * Largest Element
  * ==================
  * Given an array of integers nums, return the value of the largest element in
  * the array
  */
 public class LargestElement02 {
-    /**
+    /*
      * Time Complexity: O(n log n)
      * Space Complexity: O(1)
      */
@@ -24,7 +24,7 @@ public class LargestElement02 {
         return nums[nums.length - 1];
     }
 
-    /**
+    /*
      * Time Complexity: O(n)
      * Space Complexity: O(1)
      */
@@ -41,8 +41,8 @@ public class LargestElement02 {
         return largestElement;
     }
 
-    public static void main(String[] args) {
-        int[] arr = { -4, -3, 0, 1, -8 };
+    static void main() {
+        int[] arr = {-4, -3, 0, 1, -8};
 
         System.out.println(largestElementBrute(arr));
         System.out.println(largestElementBest(arr));
