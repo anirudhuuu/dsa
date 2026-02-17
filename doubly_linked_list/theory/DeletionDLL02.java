@@ -1,7 +1,5 @@
 package doubly_linked_list.theory;
 
-import linked_list.theory.DeletionLL04;
-
 /*
  * Deletion in Doubly Linked list
  * ==========================

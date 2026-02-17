@@ -1,7 +1,6 @@
 package graphs;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Number of provinces
@@ -65,10 +64,10 @@ public class NoOfProvinces08 {
 
     static void main() {
         int[][] adj = {
-                {1, 0, 0, 1},
-                {0, 1, 1, 0},
-                {0, 1, 1, 0},
-                {1, 0, 0, 1}
+                { 1, 0, 0, 1 },
+                { 0, 1, 1, 0 },
+                { 0, 1, 1, 0 },
+                { 1, 0, 0, 1 }
         };
 
         int result = new NoOfProvinces08().numProvinces(adj);

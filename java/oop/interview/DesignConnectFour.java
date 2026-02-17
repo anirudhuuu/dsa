@@ -170,7 +170,7 @@ public class DesignConnectFour {
             this.connectN = connectN;
             this.targetScore = targetScore;
 
-            this.players = new Player[]{
+            this.players = new Player[] {
                     new Player("Player 1", GridPosition.YELLOW),
                     new Player("Player 2", GridPosition.RED),
             };
@@ -211,6 +211,8 @@ public class DesignConnectFour {
             System.out.println("Enter column between 0 and " + (columnCount - 1) + " to add piece: ");
             int moveColumn = sc.nextInt();
             int moveRow = this.grid.placePiece(moveColumn, player.getPieceColour());
+
+            sc.close();
 
             return new Move(moveRow, moveColumn);
         }

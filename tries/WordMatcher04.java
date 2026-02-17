@@ -124,5 +124,7 @@ public class WordMatcher04 {
         String searchInput = sc.nextLine();
 
         System.out.println("Given word as input is present? :: " + wordMatcher.search(searchInput));
+
+        sc.close();
     }
 }

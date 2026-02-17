@@ -61,12 +61,12 @@ public class AdjacencyList02 {
          * Taking M edge inputs
          * -----------------------
          * for (int i = 0; i < M; i++) {
-         *    int u = sc.nextInt();
-         *    int v = sc.nextInt();
+         * int u = sc.nextInt();
+         * int v = sc.nextInt();
          *
-         *    // add edges between two nodes
-         *    adjacencyList.get(u).add(v);
-         *    adjacencyList.get(v).add(u);
+         * // add edges between two nodes
+         * adjacencyList.get(u).add(v);
+         * adjacencyList.get(v).add(u);
          * }
          */
 
@@ -78,5 +78,7 @@ public class AdjacencyList02 {
             }
             System.out.println();
         }
+
+        sc.close();
     }
 }

@@ -57,12 +57,12 @@ public class AdjacencyMatrix01 {
          * Taking M edge inputs
          * ----------------------
          * for (int i = 0; i < M; i++) {
-         *    int u = sc.nextInt();
-         *    int v = sc.nextInt();
+         * int u = sc.nextInt();
+         * int v = sc.nextInt();
          *
-         *    // add edges between two nodes
-         *    adjacencyMatrix[u][v] = 1;
-         *    adjacencyMatrix[v][u] = 1;
+         * // add edges between two nodes
+         * adjacencyMatrix[u][v] = 1;
+         * adjacencyMatrix[v][u] = 1;
          * }
          */
 
@@ -73,5 +73,7 @@ public class AdjacencyMatrix01 {
             }
             System.out.println();
         }
+
+        sc.close();
     }
 }

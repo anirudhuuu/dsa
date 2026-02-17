@@ -36,8 +36,9 @@ public class BinaryRepresentation01 {
 
     static void main() {
         System.out.println("Enter the number to convert :: ");
-        int n = new Scanner(System.in).nextInt();
-
-        System.out.println("Binary representation :: " + new BinaryRepresentation01().binaryRepresentation(n));
+        try (Scanner sc = new Scanner(System.in)) {
+            int n = sc.nextInt();
+            System.out.println("Binary representation :: " + new BinaryRepresentation01().binaryRepresentation(n));
+        }
     }
 }
