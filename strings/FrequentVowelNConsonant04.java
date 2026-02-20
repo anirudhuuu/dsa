@@ -29,7 +29,7 @@ public class FrequentVowelNConsonant04 {
      * Time Complexity: O(n)
      * Space Complexity: O(1)
      */
-    public int maxFreqSumBrute(String s) {
+    int maxFreqSumBrute(String s) {
         Map<Character, Integer> frequency = new HashMap<>();
 
         int maxVowels = 0;
