@@ -10,8 +10,8 @@ import java.util.Arrays;
  *
  * If there is no common prefix, return an empty string "".
  *
- * Time: O(n log n * m)
- * Space: O(m)
+ * Time Complexity: O(n log n * m)
+ * Space Complexity: O(m)
  *
  * n → how many strings
  * m → how long each string is
