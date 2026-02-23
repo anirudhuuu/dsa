@@ -17,7 +17,7 @@ import java.util.Map;
  * Time Complexity: O(n)
  * Space Complexity: O(n)
  */
-public class IsomorphicStrings12 {
+public class IsomorphicStrings13 {
     boolean isIsomorphic(String s, String t) {
         if (s.length() != t.length()) {
             return false;
