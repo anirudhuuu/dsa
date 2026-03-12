@@ -1,8 +1,8 @@
-package implementation;
+package stacks_queues.implementation;
 
 import java.util.Stack;
 
-/**
+/*
  * Implement Queue using Stack
  * ==============================
  * Implement a First-In-First-Out (FIFO) queue using two stacks. The implemented

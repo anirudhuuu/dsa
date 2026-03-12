@@ -1,12 +1,12 @@
-package implementation;
+package stacks_queues.implementation;
 
-/**
+/*
  * Implement queue using Linkedlist
  * =================================
  * Implement a First-In-First-Out (FIFO) queue using a singly linked list. The
  * implemented queue should support the following operations: push, pop, peek,
  * and isEmpty.
- * <p>
+ *
  * Implement the LinkedListQueue class:
  * - void push(int x): Adds element x to the end of the queue.
  * - int pop(): Removes and returns the front element of the queue.
@@ -15,7 +15,7 @@ package implementation;
  */
 class LLNode {
     int data;
-    implementation.LLNode next;
+    LLNode next;
 
     LLNode(int val) {
         data = val;
@@ -24,8 +24,8 @@ class LLNode {
 }
 
 public class LinkedListQueue04 {
-    private implementation.LLNode start;
-    private implementation.LLNode end;
+    private LLNode start;
+    private LLNode end;
     private int size;
 
     public LinkedListQueue04() {
@@ -34,7 +34,7 @@ public class LinkedListQueue04 {
     }
 
     public void push(int x) {
-        implementation.LLNode temp = new implementation.LLNode(x);
+        LLNode temp = new LLNode(x);
 
         if (start == null) {
             start = end = temp;
@@ -51,7 +51,7 @@ public class LinkedListQueue04 {
             return -1;
         }
 
-        implementation.LLNode temp = start;
+        LLNode temp = start;
         start = start.next;
 
         int poppedValue = temp.data;
@@ -71,9 +71,5 @@ public class LinkedListQueue04 {
 
     public boolean isEmpty() {
         return size == 0;
-    }
-
-    public static void main(String[] args) {
-
     }
 }

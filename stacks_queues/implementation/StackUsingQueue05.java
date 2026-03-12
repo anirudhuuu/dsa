@@ -1,9 +1,9 @@
-package implementation;
+package stacks_queues.implementation;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
+/*
  * Implement Stack using Queue
  * ==============================
  * Implement a Last-In-First-Out (LIFO) stack using a single queue. The

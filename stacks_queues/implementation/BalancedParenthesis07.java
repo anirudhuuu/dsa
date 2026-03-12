@@ -1,9 +1,9 @@
-package implementation;
+package stacks_queues.implementation;
 
 import java.util.Stack;
 
-/**
- * Balanced Paranthesis
+/*
+ * Balanced Parenthesis
  * =====================
  * Given string str containing just the characters '(', ')', '{', '}', '[' and
  * ']', check if the input string is valid and return true if the string is

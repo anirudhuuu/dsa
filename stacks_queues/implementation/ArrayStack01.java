@@ -1,6 +1,6 @@
-package implementation;
+package stacks_queues.implementation;
 
-/**
+/*
  * Implement Stack using Arrays
  * =============================
  * Implement a Last-In-First-Out (LIFO) stack using an array. The implemented

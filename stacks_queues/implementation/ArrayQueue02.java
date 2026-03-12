@@ -1,6 +1,6 @@
-package implementation;
+package stacks_queues.implementation;
 
-/**
+/*
  * Implement Queue using Arrays
  * ==============================
  * Implement a First-In-First-Out (FIFO) queue using an array. The implemented
