@@ -1,4 +1,4 @@
-package neetcode.stacks;
+package leetcode.stacks;
 
 import java.util.ArrayList;
 import java.util.List;
