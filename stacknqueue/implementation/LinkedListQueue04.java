@@ -1,4 +1,4 @@
-package stacks_queues.implementation;
+package stacknqueue.implementation;
 
 /*
  * Implement queue using Linkedlist

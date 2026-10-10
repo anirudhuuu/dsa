@@ -1,4 +1,4 @@
-package monotonic_stack;
+package stacknqueue.monotonicstack;
 
 import java.util.Stack;
 
