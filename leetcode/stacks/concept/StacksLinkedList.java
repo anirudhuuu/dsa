@@ -1,4 +1,4 @@
-package leetcode.concept;
+package leetcode.stacks.concept;
 
 /**
  * Implementation through various formats

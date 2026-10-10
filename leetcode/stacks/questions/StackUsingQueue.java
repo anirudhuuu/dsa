@@ -1,4 +1,4 @@
-package leetcode.questions;
+package leetcode.stacks.questions;
 
 import java.util.ArrayList;
 import java.util.List;
