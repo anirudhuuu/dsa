@@ -1,7 +1,6 @@
 package leetcode.stacks.questions;
 
-import java.util.List;
-import java.util.ArrayList;
+import java.util.Stack;
 
 /**
  * Valid Parentheses
@@ -48,25 +47,25 @@ import java.util.ArrayList;
  */
 class ValidParentheses {
     boolean isValid(String s) {
-        List<Character> stack = new ArrayList<>();
+        Stack<Character> stack = new Stack<>();
 
         for (char ch : s.toCharArray()) {
             if (ch == '(' || ch == '[' || ch == '{') {
-                stack.add(ch);
+                stack.push(ch);
             } else {
                 // No opening bracket available
-                if (stack.isEmpty()) {
+                if (stack.empty()) {
                     return false;
                 }
 
-                char top = stack.getLast();
+                char top = stack.peek();
 
                 if (ch == ')' && top == '(') {
-                    stack.removeLast();
+                    stack.pop();
                 } else if (ch == '}' && top == '{') {
-                    stack.removeLast();
+                    stack.pop();
                 } else if (ch == ']' && top == '[') {
-                    stack.removeLast();
+                    stack.pop();
                 } else {
                     // Closing bracket doesn't match
                     return false;
@@ -74,6 +73,6 @@ class ValidParentheses {
             }
         }
 
-        return stack.isEmpty();
+        return stack.empty();
     }
 }
