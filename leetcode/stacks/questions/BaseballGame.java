@@ -1,8 +1,6 @@
 package leetcode.stacks.questions;
 
-import java.util.List;
 import java.util.Stack;
-import java.util.ArrayList;
 
 /**
  * 682. Baseball Game

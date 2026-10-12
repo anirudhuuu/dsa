@@ -1,7 +1,7 @@
 package leetcode.stacks.questions;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.ArrayDeque;
+import java.util.Queue;
 
 /**
  * Implement Stack using Queues
@@ -51,34 +51,34 @@ import java.util.List;
  * All the calls to pop and top are valid.
  */
 class StackUsingQueue {
-    List<Integer> queue1;
-    List<Integer> queue2;
+    Queue<Integer> queue1;
+    Queue<Integer> queue2;
 
     public StackUsingQueue() {
-        queue1 = new ArrayList<>();
-        queue2 = new ArrayList<>();
+        queue1 = new ArrayDeque<>();
+        queue2 = new ArrayDeque<>();
     }
 
     public void push(int x) {
         while (!queue1.isEmpty()) {
-            int front = queue1.removeFirst();
+            int front = queue1.remove();
             queue2.add(front);
         }
 
         queue1.add(x);
 
         while (!queue2.isEmpty()) {
-            int front = queue2.removeFirst();
+            int front = queue2.remove();
             queue1.add(front);
         }
     }
 
     public int pop() {
-        return queue1.removeFirst();
+        return queue1.remove();
     }
 
     public int top() {
-        return queue1.getFirst();
+        return queue1.peek();
     }
 
     public boolean empty() {

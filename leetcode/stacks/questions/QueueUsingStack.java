@@ -1,7 +1,6 @@
 package leetcode.stacks.questions;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Stack;
 
 /**
  * Implement Queue using Stacks
@@ -49,40 +48,40 @@ import java.util.List;
  * All the calls to pop and peek are valid.
  */
 class QueueUsingStack {
-    List<Integer> stack1; // primary stack
-    List<Integer> stack2;
+    Stack<Integer> stack1; // primary stack
+    Stack<Integer> stack2;
 
     public QueueUsingStack() {
-        stack1 = new ArrayList<>();
-        stack2 = new ArrayList<>();
+        stack1 = new Stack<>();
+        stack2 = new Stack<>();
     }
 
     public void push(int x) {
         // Move all values of stack1 to stack2
-        while (!stack1.isEmpty()) {
-            int last = stack1.removeLast();
-            stack2.add(last);
+        while (!stack1.empty()) {
+            int last = stack1.pop();
+            stack2.push(last);
         }
 
         // Add the new value to stack1
-        stack1.add(x);
+        stack1.push(x);
 
         // Move all values of stack2 to stack1
-        while (!stack2.isEmpty()) {
-            int last = stack2.removeLast();
-            stack1.add(last);
+        while (!stack2.empty()) {
+            int last = stack2.pop();
+            stack1.push(last);
         }
     }
 
     public int pop() {
-        return stack1.removeLast();
+        return stack1.pop();
     }
 
     public int peek() {
-        return stack1.getLast();
+        return stack1.peek();
     }
 
     public boolean empty() {
-        return stack1.isEmpty();
+        return stack1.empty();
     }
 }
