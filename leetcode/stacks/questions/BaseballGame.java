@@ -1,6 +1,7 @@
 package leetcode.stacks.questions;
 
 import java.util.List;
+import java.util.Stack;
 import java.util.ArrayList;
 
 /**
@@ -80,28 +81,37 @@ import java.util.ArrayList;
  */
 class BaseballGame {
     int calPoints(String[] operations) {
-        List<Integer> stack = new ArrayList<>();
+        Stack<Integer> stack = new Stack<>();
 
-        for (String operation : operations) {
-            if (operation.equals("+")) {
-                int last = stack.getLast();
-                int secondLast = stack.get(stack.size() - 2);
+        for (String op : operations) {
+            if (op.equals("C")) {
+                // Handle "C"
+                stack.pop();
+            } else if (op.equals("D")) {
+                // Handle "D"
+                stack.push(stack.peek() * 2);
+            } else if (op.equals("+")) {
+                // Handle "+"
+                int topValue1 = stack.pop();
+                int topValue2 = stack.pop();
 
-                stack.add(last + secondLast);
-            } else if (operation.equals("D")) {
-                stack.add(stack.getLast() * 2);
-            } else if (operation.equals("C")) {
-                stack.remove(stack.size() - 1);
+                int sum = topValue1 + topValue2;
+
+                stack.push(topValue2);
+                stack.push(topValue1);
+                stack.push(sum);
             } else {
-                // An integer 'x'
-                stack.add(Integer.parseInt(operation));
+                // Handle a number
+                stack.push(Integer.parseInt(op));
             }
+
         }
 
+        // Return the sum of all valid scores
         int result = 0;
 
-        for (Integer val : stack) {
-            result += val;
+        while (!stack.empty()) {
+            result = result + stack.pop();
         }
 
         return result;
